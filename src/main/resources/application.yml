@@ -2,9 +2,9 @@ spring:
   application:
     name: todo-app
   datasource:
-    url: jdbc:postgresql://dpg-clfbb3ladtrs73b18mp0-a.singapore-postgres.render.com:5432/hostelkun
-    password: Mf3LqFCdbrabbxwaoOOR7CUuqwrSVmhI
-    username: hostelkun_user
+    url: jdbc:postgresql://dpg-ch1qjel269v61fa7aaog-a.singapore-postgres.render.com:5432/rean
+    password: 3AOPwkmundHGvpIf14cKHsgM27lBTYYf
+    username: rean
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
