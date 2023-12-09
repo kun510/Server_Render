@@ -1,23 +1,23 @@
-# Sử dụng hình ảnh Maven đầy đủ với OpenJDK để build ứng dụng
+# Use the Maven image with OpenJDK for building the application
 FROM maven:3.8.4-openjdk-17 AS build
 
-# Tạo thư mục làm việc /app
+# Set the working directory to /app
 WORKDIR /app
 
-# Sao chép tất cả các file từ thư mục hiện tại vào /app
+# Copy all files from the current directory to /app
 COPY . /app
 
-# Build ứng dụng Maven
+# Build the Maven application
 RUN mvn clean install
 
-# Chuyển sang hình ảnh OpenJDK 17 để giảm kích thước của ảnh
-FROM openjdk:17-jre-slim
+# Switch to a different tag for the OpenJDK image
+FROM openjdk:17-jdk-slim
 
-# Tạo thư mục làm việc /app
+# Set the working directory to /app
 WORKDIR /app
 
-# Sao chép file WAR từ giai đoạn build trước
+# Copy the WAR file from the build stage
 COPY --from=build /app/target/api-0.0.1-SNAPSHOT.war /app/api-0.0.1-SNAPSHOT.war
 
-# Thiết lập entrypoint để chạy ứng dụng khi container khởi động
+# Set the entrypoint to run the application when the container starts
 ENTRYPOINT ["java", "-jar", "api-0.0.1-SNAPSHOT.war"]
