@@ -5,21 +5,26 @@
 #
 #ENTRYPOINT ["java", "-jar", "api-0.0.1-SNAPSHOT.war"]
 
-# FROM maven:3.9.6-openjdk-17-slim AS build
-# WORKDIR /app
-# COPY . /app
-# RUN mvn clean install
-# FROM openjdk:17-jre-slim
+# Sử dụng một phiên bản Maven và OpenJDK khác
+FROM maven:3.8.4-openjdk-17-slim AS build
 
-# WORKDIR /app
+# Tạo thư mục làm việc /app
+WORKDIR /app
 
-# COPY --from=build /app/target/api-0.0.1-SNAPSHOT.war /app/api-0.0.1-SNAPSHOT.war
-# ENTRYPOINT ["java", "-jar", "api-0.0.1-SNAPSHOT.war"]
-FROM maven:3.8.5-openjdk-17 AS build
-COPY . .
-RUN mvn clean package -DskipTests
+# Sao chép tất cả các file từ thư mục hiện tại vào /app
+COPY . /app
 
-FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/api-0.0.1-SNAPSHOT.war api-0.0.1-SNAPSHOT.war
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","demo.jar"]
+# Build ứng dụng Maven
+RUN mvn clean install
+
+# Sử dụng image OpenJDK 17 chứa JRE để giảm kích thước
+FROM openjdk:17-jre-slim
+
+# Tạo thư mục làm việc /app
+WORKDIR /app
+
+# Sao chép file WAR từ bước build trước đó
+COPY --from=build /app/target/api-0.0.1-SNAPSHOT.war /app/api-0.0.1-SNAPSHOT.war
+
+# Thiết lập entrypoint để chạy ứng dụng khi container khởi động
+ENTRYPOINT ["java", "-jar", "api-0.0.1-SNAPSHOT.war"]
