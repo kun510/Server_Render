@@ -14,11 +14,13 @@ WORKDIR /app
 # Sao chép tất cả các file từ thư mục hiện tại vào /app
 COPY . /app
 
-# Build ứng dụng Maven
-RUN mvn clean install
+# Cài đặt Maven và các dependencies
+RUN apt-get update && \
+    apt-get install -y git && \
+    mvn clean install
 
 # Sử dụng image OpenJDK 17 chứa JRE để giảm kích thước
-FROM openjdk:17.0.1-jdk-slim
+FROM openjdk:17-jre-slim
 
 # Tạo thư mục làm việc /app
 WORKDIR /app
