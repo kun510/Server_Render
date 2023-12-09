@@ -1,4 +1,3 @@
-D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\configuration\ImageListHttpMessageConverter.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\controller\HostController.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\model\Room.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\service\IhostService.java
@@ -12,7 +11,6 @@ D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\repository\N
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\service\IuserService.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\request\ReportRq.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\request\areaRq.java
-D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\model\RoomHistory.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\model\Rent.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\response\Response.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\model\ReviewBoarding.java
@@ -40,7 +38,6 @@ D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\configuratio
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\model\ImgRoom.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\model\Boarding_host.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\request\LoginRq.java
-D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\configuration\WebMvcConfig.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\request\BillTotal.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\repository\ReviewReponsitory.java
 D:\hoctap\Server\hostel\src\main\java\com\example\doancuoiky\hostel\model\Report.java

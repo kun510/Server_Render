@@ -9,7 +9,6 @@ com\example\doancuoiky\hostel\model\Boarding_host.class
 com\example\doancuoiky\hostel\model\Report.class
 com\example\doancuoiky\hostel\configuration\CorsConfig.class
 com\example\doancuoiky\hostel\request\BillTotal.class
-com\example\doancuoiky\hostel\model\RoomHistory.class
 com\example\doancuoiky\hostel\HostelApplication.class
 com\example\doancuoiky\hostel\model\ImgRoom.class
 com\example\doancuoiky\hostel\repository\ReviewReponsitory.class
@@ -26,7 +25,6 @@ com\example\doancuoiky\hostel\model\ListandCoutRoom.class
 com\example\doancuoiky\hostel\response\ResponseOtp.class
 com\example\doancuoiky\hostel\service\HostServiceImplement.class
 com\example\doancuoiky\hostel\repository\BoardingRepository.class
-com\example\doancuoiky\hostel\configuration\ImageListHttpMessageConverter.class
 com\example\doancuoiky\hostel\repository\ReviewBoardingReponsitory.class
 com\example\doancuoiky\hostel\request\areaRq.class
 com\example\doancuoiky\hostel\model\Role.class
@@ -51,7 +49,6 @@ com\example\doancuoiky\hostel\model\TotalBill.class
 com\example\doancuoiky\hostel\repository\RoleRepository.class
 com\example\doancuoiky\hostel\configuration\Configurationweb.class
 com\example\doancuoiky\hostel\repository\HelpRepository.class
-com\example\doancuoiky\hostel\configuration\WebMvcConfig.class
 com\example\doancuoiky\hostel\repository\BillRepository.class
 com\example\doancuoiky\hostel\model\RoomFavourite.class
 com\example\doancuoiky\hostel\service\AdminServiceImplement.class
