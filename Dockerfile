@@ -18,7 +18,7 @@ COPY . /app
 RUN mvn clean install
 
 # Sử dụng image OpenJDK 17 chứa JRE để giảm kích thước
-FROM openjdk:17-jre-slim
+FROM openjdk:17.0.1-jdk-slim
 
 # Tạo thư mục làm việc /app
 WORKDIR /app
